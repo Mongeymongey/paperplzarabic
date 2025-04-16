@@ -1,7 +1,7 @@
 /*
 _____________________________________________
 Arabic Font Override for Papers Please Loc Tool & Game Packer
-(Structurally Mirrored Version)
+(Structurally Mirrored Version - Including Loc Tool Fonts)
 Based on fonts hosted at: https://github.com/Mongeymongey/paperplzarabic/tree/main/fonts
 _____________________________________________
 Instructions:
@@ -30,146 +30,138 @@ Instructions:
 _____________________________________________
 */
 
-/* Define Fallback Font (Optional but recommended) */
+/* Define Fallback Font (Using a standard browser font) */
 @font-face { 
-    font-family: 'ArabicFallback'; 
+    font-family: 'ArabicFallback'; /* Renamed for clarity */
     src: local("Arial"), local("Helvetica"), sans-serif; 
 }
 
 /* 
 ----------------------------------------------------------------------------------
-Fonts here are used by both the loc tool and the game.
-(Mapped to available Arabic fonts)
+SECTION 1: Fonts used by both the loc tool and the game.
 ----------------------------------------------------------------------------------
 */
 
 /*---- tiny -------------------------------------------------*/
 @font-face { 
-    font-family: 'tiny'; /* Keeping original family name */
-    src: url('https://raw.githubusercontent.com/Mongeymongey/paperplzarabic/main/fonts/regular.ttf'); /* Using regular.ttf */
+    font-family: 'tiny'; 
+    src: url('https://raw.githubusercontent.com/Mongeymongey/paperplzarabic/main/fonts/regular.ttf'); 
 }
 .font-tiny { 
-    font-family: 'tiny', 'ArabicFallback'; /* Apply */
-    font-size: 10px; /* Adjusted for Arabic legibility - TEST */
-    line-height: 12px; /* Adjusted for Arabic legibility - TEST */
-    /* Original: 8px / 8px */
+    font-family: 'tiny', 'ArabicFallback'; 
+    font-size: 10px; /* Adjusted - TEST */
+    line-height: 12px; /* Adjusted - TEST */
 }
 
 /*---- small -------------------------------------------------*/
 @font-face { 
-    font-family: 'small_tight'; /* Keeping original family name */
-    src: url('https://raw.githubusercontent.com/Mongeymongey/paperplzarabic/main/fonts/regular.ttf'); /* Using regular.ttf */
+    font-family: 'small_tight'; 
+    src: url('https://raw.githubusercontent.com/Mongeymongey/paperplzarabic/main/fonts/regular.ttf'); 
 }
 .font-small_tight { 
-    font-family: 'small_tight', 'ArabicFallback'; /* Apply */
-    font-size: 10px; /* Adjusted for Arabic legibility - TEST */
-    line-height: 12px; /* Adjusted for Arabic legibility - TEST */
-    /* Original: 8px / 8px */
+    font-family: 'small_tight', 'ArabicFallback'; 
+    font-size: 10px; /* Adjusted - TEST */
+    line-height: 12px; /* Adjusted - TEST */
 }
 
 @font-face { 
-    font-family: 'small_harsh'; /* Keeping original family name */
-    src: url('https://raw.githubusercontent.com/Mongeymongey/paperplzarabic/main/fonts/regular.ttf'); /* Using regular.ttf */
+    font-family: 'small_harsh'; 
+    src: url('https://raw.githubusercontent.com/Mongeymongey/paperplzarabic/main/fonts/regular.ttf'); 
 }
 .font-small_harsh { 
-    font-family: 'small_harsh', 'ArabicFallback'; /* Apply */
-    font-size: 10px; /* Adjusted for Arabic legibility - TEST */
-    line-height: 12px; /* Adjusted for Arabic legibility - TEST */
-    /* Original: 8px / 9px */
+    font-family: 'small_harsh', 'ArabicFallback'; 
+    font-size: 10px; /* Adjusted - TEST */
+    line-height: 12px; /* Adjusted - TEST */
 }
 
 /*---- regular -------------------------------------------------*/
 @font-face { 
-    font-family: 'regular'; /* Keeping original family name */
-    src: url('https://raw.githubusercontent.com/Mongeymongey/paperplzarabic/main/fonts/regular.ttf'); /* Using regular.ttf */
+    font-family: 'regular'; 
+    src: url('https://raw.githubusercontent.com/Mongeymongey/paperplzarabic/main/fonts/regular.ttf'); 
 }
 .font-regular, body { 
-    font-family: 'regular', 'ArabicFallback'; /* Apply */
-    font-size: 10px; /* Adjusted for Arabic legibility - TEST */
-    line-height: 12px; /* Adjusted for Arabic legibility - TEST */
-    /* Original: 8px / 8px */
+    font-family: 'regular', 'ArabicFallback'; 
+    font-size: 10px; /* Adjusted - TEST */
+    line-height: 12px; /* Adjusted - TEST */
 }
 
 @font-face { 
-    font-family: 'regular_short'; /* Keeping original family name */
-    src: url('https://raw.githubusercontent.com/Mongeymongey/paperplzarabic/main/fonts/regular.ttf'); /* Using regular.ttf */
+    font-family: 'regular_short'; 
+    src: url('https://raw.githubusercontent.com/Mongeymongey/paperplzarabic/main/fonts/regular.ttf'); 
 }
 .font-regular_short { 
-    font-family: 'regular_short', 'ArabicFallback'; /* Apply */
-    font-size: 10px; /* Adjusted for Arabic legibility - TEST */
-    line-height: 12px; /* Adjusted for Arabic legibility - TEST */
-    /* Original: 8px / 8px */
+    font-family: 'regular_short', 'ArabicFallback'; 
+    font-size: 10px; /* Adjusted - TEST */
+    line-height: 12px; /* Adjusted - TEST */
 }
 
 /*---- title -------------------------------------------------*/
 @font-face { 
-    font-family: 'title_tall'; /* Keeping original family name */
-    src: url('https://raw.githubusercontent.com/Mongeymongey/paperplzarabic/main/fonts/titletall.ttf'); /* Using titletall.ttf */
+    font-family: 'title_tall'; 
+    src: url('https://raw.githubusercontent.com/Mongeymongey/paperplzarabic/main/fonts/titletall.ttf'); 
 }
 .font-title_tall { 
-    font-family: 'title_tall', 'ArabicFallback'; /* Apply */
-    font-size: 16px; /* Original size */
-    line-height: 16px; /* Original size */
+    font-family: 'title_tall', 'ArabicFallback'; 
+    font-size: 16px; 
+    line-height: 16px; 
 }
 
 @font-face { 
-    font-family: 'title_news'; /* Keeping original family name */
-    src: url('https://raw.githubusercontent.com/Mongeymongey/paperplzarabic/main/fonts/titlenewsthick.ttf'); /* Using titlenewsthick.ttf */
+    font-family: 'title_news'; 
+    src: url('https://raw.githubusercontent.com/Mongeymongey/paperplzarabic/main/fonts/titlenewsthick.ttf'); 
 } 
 .font-title_news { 
-    font-family: 'title_news', 'ArabicFallback'; /* Apply */
-    font-size: 16px; /* Original size */
-    line-height: 16px; /* Original size */
+    font-family: 'title_news', 'ArabicFallback'; 
+    font-size: 16px; 
+    line-height: 16px; 
 }
 
 @font-face { 
-    font-family: 'title_thick'; /* Keeping original family name */
-    src: url('https://raw.githubusercontent.com/Mongeymongey/paperplzarabic/main/fonts/titlenewsthick.ttf'); /* Using titlenewsthick.ttf */
+    font-family: 'title_thick'; 
+    src: url('https://raw.githubusercontent.com/Mongeymongey/paperplzarabic/main/fonts/titlenewsthick.ttf'); 
 }
 .font-title_thick { 
-    font-family: 'title_thick', 'ArabicFallback'; /* Apply */
-    font-size: 14px; /* Original size */
-    line-height: 14px; /* Adjusted - TEST (Original was 11px) */
+    font-family: 'title_thick', 'ArabicFallback'; 
+    font-size: 14px; 
+    line-height: 14px; /* Adjusted - TEST */
 }
 
 /*---- ui -------------------------------------------------*/
 @font-face { 
-    font-family: 'ui_regular'; /* Keeping original family name */
-    src: url('https://raw.githubusercontent.com/Mongeymongey/paperplzarabic/main/fonts/regular.ttf'); /* Using regular.ttf */
+    font-family: 'ui_regular'; 
+    src: url('https://raw.githubusercontent.com/Mongeymongey/paperplzarabic/main/fonts/regular.ttf'); 
 }
 .font-ui_regular { 
-    font-family: 'ui_regular', 'ArabicFallback'; /* Apply */
-    font-size: 10px; /* Adjusted for Arabic legibility - TEST */
-    line-height: 12px; /* Adjusted for Arabic legibility - TEST */
-    /* Original: 8px / 8px */
+    font-family: 'ui_regular', 'ArabicFallback'; 
+    font-size: 10px; /* Adjusted - TEST */
+    line-height: 12px; /* Adjusted - TEST */
 }
 
 /*---- large -------------------------------------------------*/
-/* Assigning tinysmalllarge.otf here for variety, TEST LEGIBILITY carefully */
+/* Using tinysmalllarge.otf here - TEST LEGIBILITY! Switch src to regular.ttf if needed. */
 @font-face { 
-    font-family: 'large'; /* Keeping original family name */
+    font-family: 'large'; 
     src: url('https://raw.githubusercontent.com/Mongeymongey/paperplzarabic/main/fonts/tinysmalllarge.otf'); 
 }
 .font-large { 
-    font-family: 'large', 'ArabicFallback'; /* Apply */
-    font-size: 10px; /* Adjusted for Arabic legibility - TEST */
-    line-height: 13px; /* Adjusted - TEST (Original was 8px font / 10px line) */
+    font-family: 'large', 'ArabicFallback'; 
+    font-size: 10px; /* Adjusted - TEST */
+    line-height: 13px; /* Adjusted - TEST */
 }
 
 /* 
 ----------------------------------------------------------------------------------
-Fonts below here are used only by the loc tool and don't appear in the game.
-(These definitions can be simplified or reused from above for the tool)
+SECTION 2: Fonts below here are used only by the loc tool and don't appear in the game.
+           Applying Arabic fonts consistently.
 ----------------------------------------------------------------------------------
 */
 
-/* Fallback already defined above */
+/* Fallback font definition moved to the top */
 
 /*---- small ----*/
-/* Defining 'small' specifically, but reusing regular.ttf */
 @font-face { 
-    font-family: 'small'; 
-    src: url('https://raw.githubusercontent.com/Mongeymongey/paperplzarabic/main/fonts/regular.ttf'); 
+    font-family: 'small'; /* Keeping original name */
+    src: url('https://raw.githubusercontent.com/Mongeymongey/paperplzarabic/main/fonts/regular.ttf'); /* Reusing regular */
 }
 .font-small { 
     font-family: 'small', 'ArabicFallback'; 
@@ -178,22 +170,20 @@ Fonts below here are used only by the loc tool and don't appear in the game.
 }
 
 /*---- generic serif ----*/
-/* Defining 'title_serif', reusing regular.ttf for simplicity */
 @font-face { 
-    font-family: 'title_serif'; 
-    src: url('https://raw.githubusercontent.com/Mongeymongey/paperplzarabic/main/fonts/regular.ttf'); 
+    font-family: 'title_serif'; /* Keeping original name */
+    src: url('https://raw.githubusercontent.com/Mongeymongey/paperplzarabic/main/fonts/regular.ttf'); /* Reusing regular */
 } 
 .font-title_serif { 
     font-family: 'title_serif', 'ArabicFallback'; 
-    font-size: 11px; /* Slightly larger */
+    font-size: 11px; /* Original 10px, slightly adjusted */
     line-height: 13px; 
 }
 
 /*---- cursive ----*/
-/* Defining 'cursive', reusing regular.ttf */
 @font-face { 
-    font-family: 'cursive'; 
-    src: url('https://raw.githubusercontent.com/Mongeymongey/paperplzarabic/main/fonts/regular.ttf'); 
+    font-family: 'cursive'; /* Keeping original name */
+    src: url('https://raw.githubusercontent.com/Mongeymongey/paperplzarabic/main/fonts/regular.ttf'); /* Reusing regular */
 }
 .font-cursive { 
     font-family: 'cursive', 'ArabicFallback'; 
@@ -202,10 +192,9 @@ Fonts below here are used only by the loc tool and don't appear in the game.
 }
 
 /*---- scribble ----*/
-/* Defining 'scribble', reusing regular.ttf */
 @font-face { 
-    font-family: 'scribble'; 
-    src: url('https://raw.githubusercontent.com/Mongeymongey/paperplzarabic/main/fonts/regular.ttf'); 
+    font-family: 'scribble'; /* Keeping original name */
+    src: url('https://raw.githubusercontent.com/Mongeymongey/paperplzarabic/main/fonts/regular.ttf'); /* Reusing regular */
 }
 .font-scribble { 
     font-family: 'scribble', 'ArabicFallback'; 
@@ -231,55 +220,50 @@ Fonts below here are used only by the loc tool and don't appear in the game.
     font-family: 'passport_kolechia'; 
     src: url('https://raw.githubusercontent.com/Mongeymongey/paperplzarabic/main/fonts/regular.ttf'); 
 }
-/* Apply - these classes likely don't exist, but if they did: */
+/* Styles for these would apply if specific classes existed, e.g.: */
 /* .font-passport_arstotzka { font-family: 'passport_arstotzka', 'ArabicFallback'; } */
-/* ... etc ... */
-/* More likely, the tool uses specific inline styles or other classes for these */
 
 
 /*---- misc ----*/
-/* Defining 'press', using titlenewsthick.ttf */
 @font-face { 
-    font-family: 'press'; 
-    src: url('https://raw.githubusercontent.com/Mongeymongey/paperplzarabic/main/fonts/titlenewsthick.ttf'); 
+    font-family: 'press'; /* Keeping original name */
+    src: url('https://raw.githubusercontent.com/Mongeymongey/paperplzarabic/main/fonts/titlenewsthick.ttf'); /* Reusing title font */
 }
 .font-press { 
     font-family: 'press', 'ArabicFallback'; 
-    font-size: 22px; /* Original size */
-    line-height: 24px; /* Adjusted slightly */
+    font-size: 22px; 
+    line-height: 24px; /* Adjusted */
 }
 
-/* Defining 'propaganda', using titlenewsthick.ttf */
 @font-face { 
-    font-family: 'propaganda'; 
-    src: url('https://raw.githubusercontent.com/Mongeymongey/paperplzarabic/main/fonts/titlenewsthick.ttf'); 
+    font-family: 'propaganda'; /* Keeping original name */
+    src: url('https://raw.githubusercontent.com/Mongeymongey/paperplzarabic/main/fonts/titlenewsthick.ttf'); /* Reusing title font */
 }
 .font-propaganda { 
     font-family: 'propaganda', 'ArabicFallback'; 
-    font-size: 11px; /* Slightly larger than original */
+    font-size: 11px; /* Adjusted */
     line-height: 12px; 
 }
 
-/* Defining 'kid_writing', using regular.ttf */
 @font-face { 
-    font-family: 'kid_writing'; 
-    src: url('https://raw.githubusercontent.com/Mongeymongey/paperplzarabic/main/fonts/regular.ttf'); 
+    font-family: 'kid_writing'; /* Keeping original name */
+    src: url('https://raw.githubusercontent.com/Mongeymongey/paperplzarabic/main/fonts/regular.ttf'); /* Reusing regular */
 }
 .font-kid_writing { 
     font-family: 'kid_writing', 'ArabicFallback'; 
-    font-size: 16px; /* Original size */
-    line-height: 18px; /* Adjusted slightly */
+    font-size: 16px; 
+    line-height: 18px; /* Adjusted */
+    /* Original font-weight: bold might not apply well to Arabic regular */
 }
 
-/* Defining 'news', using titlenewsthick.ttf */
 @font-face { 
-    font-family: 'news'; 
-    src: url('https://raw.githubusercontent.com/Mongeymongey/paperplzarabic/main/fonts/titlenewsthick.ttf'); 
+    font-family: 'news'; /* Keeping original name */
+    src: url('https://raw.githubusercontent.com/Mongeymongey/paperplzarabic/main/fonts/titlenewsthick.ttf'); /* Reusing title font */
 }
 .font-news { 
     font-family: 'news', 'ArabicFallback'; 
-    font-size: 23px; /* Original size */
-    line-height: 30px; /* Adjusted slightly - original 34px might be too much */
+    font-size: 23px; 
+    line-height: 30px; /* Adjusted */
 }
 
 /* Anti-aliasing settings (keep from original) */
