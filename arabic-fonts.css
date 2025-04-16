@@ -1,1 +1,199 @@
+/*
+_____________________________________________
+Arabic Font Override for Papers Please Loc Tool & Game Packer
+Based on fonts hosted at: https://github.com/Mongeymongey/paperplzarabic/tree/main/fonts
+_____________________________________________
+Instructions:
 
+1. Font files ('regular.ttf', 'titletall.ttf', 'titlenewsthick.ttf', 'tinysmalllarge.otf') 
+   are uploaded to the /fonts/ directory. This CSS primarily uses the first three.
+
+2. Upload THIS CSS file ('arabic-fonts.css') to your GitHub repository (e.g., the root directory).
+
+3. Get the **RAW** URL for this hosted CSS file. 
+   (Go to the file on GitHub, click the "Raw" button, copy the URL from your browser's address bar. 
+    It should look something like: 
+    https://raw.githubusercontent.com/Mongeymongey/paperplzarabic/main/arabic-fonts.css)
+
+4. Paste that full RAW URL into the "Font Stylesheet Override" field in the Papers Please Online Loc Tool.
+
+5. Clear browser cache and reload the tool to check font rendering.
+
+6. For the game: Use the packer tool with the "--makeFonts" parameter. Ensure the packer can resolve 
+   the font paths relative to where it's run or use appropriate local paths if needed.
+   The `@font-face` rules below use the online URLs for the tool, but the packer might 
+   need local paths if it doesn't download them. Check packer documentation.
+_____________________________________________
+*/
+
+/* Define Fallback Font */
+@font-face { 
+    font-family: 'fallback'; 
+    /* Using a generic sans-serif as a basic fallback */
+    src: local("Arial"), local("Helvetica"), sans-serif; 
+}
+
+/* 
+----------------------------------------------------------------------------------
+SECTION 1: Fonts used by both the loc tool and the game.
+----------------------------------------------------------------------------------
+*/
+
+/* --- Define Core Arabic Fonts --- */
+@font-face { 
+    font-family: 'ArabicRegular'; /* Unique name for the regular font */
+    /* Points to the RAW file URL on GitHub */
+    src: url('https://raw.githubusercontent.com/Mongeymongey/paperplzarabic/main/fonts/regular.ttf'); 
+}
+
+@font-face { 
+    font-family: 'ArabicTitleTall'; /* Unique name for the tall title font */
+    /* Updated filename */
+    src: url('https://raw.githubusercontent.com/Mongeymongey/paperplzarabic/main/fonts/titletall.ttf'); 
+}
+
+@font-face { 
+    font-family: 'ArabicTitleNewsThick'; /* Unique name for the news/thick title font */
+    /* Updated filename */
+    src: url('https://raw.githubusercontent.com/Mongeymongey/paperplzarabic/main/fonts/titlenewsthick.ttf'); 
+}
+
+/* Optional: Define the tinysmalllarge font if you specifically want to use it later */
+/* We are not applying it by default in this CSS for consistency */
+/*
+@font-face { 
+    font-family: 'ArabicTinySmallLarge'; 
+    src: url('https://raw.githubusercontent.com/Mongeymongey/paperplzarabic/main/fonts/tinysmalllarge.otf'); 
+}
+*/
+
+
+/* --- Apply Arabic Fonts to Game Styles --- */
+
+/*---- tiny / small / regular / ui / large consolidated ----*/
+/* Using ArabicRegular for all these small/standard sizes */
+.font-tiny, 
+.font-small_tight, 
+.font-small_harsh, 
+.font-regular, body, 
+.font-regular_short,
+.font-ui_regular,
+.font-large { 
+    font-family: 'ArabicRegular', 'fallback'; 
+    font-size: 10px; /* Adjusted for Arabic legibility - TEST THIS CAREFULLY */
+    line-height: 12px; /* Adjusted for Arabic legibility - TEST THIS CAREFULLY */
+    /* Original sizes were mostly 8px font / 8-10px line */
+}
+
+/* Special case for .font-large if slightly different line height needed */
+.font-large {
+    line-height: 13px; /* Slightly more spacing, matching original ratio roughly */
+}
+
+
+/*---- title ----*/
+.font-title_tall { 
+    font-family: 'ArabicTitleTall', 'fallback'; 
+    font-size: 16px; /* Original size */
+    line-height: 16px; /* Original size */
+}
+
+.font-title_news { 
+    font-family: 'ArabicTitleNewsThick', 'fallback'; 
+    font-size: 16px; /* Original size */
+    line-height: 16px; /* Original size */
+}
+
+.font-title_thick { 
+    font-family: 'ArabicTitleNewsThick', 'fallback'; /* Reusing the news font */
+    font-size: 14px; /* Original size */
+    line-height: 14px; /* Adjusted - original was 11px, likely too tight for Arabic */
+}
+
+
+/* 
+----------------------------------------------------------------------------------
+SECTION 2: Fonts below here are used only by the loc tool and don't appear in the game.
+           We can reuse the main Arabic fonts for simplicity in the tool.
+----------------------------------------------------------------------------------
+*/
+
+/*---- small ----*/
+.font-small { 
+    font-family: 'ArabicRegular', 'fallback'; 
+    font-size: 10px; /* Match adjusted regular size */
+    line-height: 12px; /* Match adjusted regular size */
+}
+
+/*---- generic serif ----*/
+/* Reusing regular for simplicity, could use a different Arabic Serif if needed for tool */
+.font-title_serif { 
+    font-family: 'ArabicRegular', 'fallback'; 
+    font-size: 11px; /* Slightly larger than regular */
+    line-height: 13px; 
+}
+
+/*---- cursive ----*/
+/* Reusing regular, Arabic cursive is complex */
+.font-cursive { 
+    font-family: 'ArabicRegular', 'fallback'; 
+    font-size: 10px; /* Match adjusted regular size */
+    line-height: 12px; /* Match adjusted regular size */
+}
+
+/*---- scribble ----*/
+/* Reusing regular, hard to match style */
+.font-scribble { 
+    font-family: 'ArabicRegular', 'fallback'; 
+    font-size: 16px; /* Original size */
+    line-height: 16px; /* Original size */
+}
+
+/*---- passport countries ----*/
+/* Reusing regular font for all passport country names in the tool */
+/* Individual @font-face rules for these are omitted as we reuse ArabicRegular */
+.font-passport_arstotzka,
+.font-passport_republia,
+.font-passport_unitedfed,
+.font-passport_kolechia {
+    font-family: 'ArabicRegular', 'fallback';
+    /* Use appropriate size/weight if needed for tool */
+    font-size: 10px;
+    line-height: 12px;
+}
+
+/*---- misc ----*/
+/* Using title font for Press */
+.font-press { 
+    font-family: 'ArabicTitleNewsThick', 'fallback'; 
+    font-size: 22px; /* Original size */
+    line-height: 24px; /* Adjusted slightly */
+}
+
+/* Using title font for Propaganda */
+.font-propaganda { 
+    font-family: 'ArabicTitleNewsThick', 'fallback'; 
+    font-size: 11px; /* Slightly larger than original */
+    line-height: 12px; 
+}
+
+/* Using regular for Kid Writing */
+.font-kid_writing { 
+    font-family: 'ArabicRegular', 'fallback'; 
+    font-size: 16px; /* Original size */
+    line-height: 18px; /* Adjusted slightly */
+}
+
+/* Using title font for News */
+.font-news { 
+    font-family: 'ArabicTitleNewsThick', 'fallback'; 
+    font-size: 23px; /* Original size */
+    line-height: 30px; /* Adjusted slightly - original 34px might be too much */
+}
+
+/* Anti-aliasing settings (keep from original) */
+body {
+    font-smooth: never;
+    -webkit-font-smoothing: none;
+	text-rendering: optimizeSpeed !important;
+}
