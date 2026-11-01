@@ -88,21 +88,28 @@ After any change: clear the browser cache, reload the loc tool, repack with --ma
 .capture [style*="line-height:8px"],  .capture [style*="line-height: 8px"],
 .capture [style*="line-height:9px"],  .capture [style*="line-height: 9px"],
 .capture [style*="line-height:10px"], .capture [style*="line-height: 10px"] {
-    line-height: 11px !important;
+    line-height: 10px !important;
 }
 
 /* 2. Multi-line titles (e.g. Certificate of Vaccination, flyers) */
 .capture .font-title_tall,
 .capture .font-title_news,
 .capture .font-title_thick {
-    line-height: 18px !important;
+    line-height: 16px !important;
 }
 
-/* 3. Passport field labels (DOB / SEX / ISS / EXP) sit in tiny boxes */
-.capture.passport .font-small,
-.capture .passport .font-small {
+/* 3. Smaller text inside documents only (in-game text stays 9px).
+      8px is the smallest size where Arabic dots stay readable. */
+.capture .font-tiny, .capture .font-small_tight, .capture .font-small_harsh,
+.capture .font-regular, .capture .font-regular_short, .capture .font-ui_regular,
+.capture .font-large, .capture .font-small, .capture .font-cursive,
+.capture.font-tiny, .capture.font-small_tight, .capture.font-small_harsh,
+.capture.font-regular, .capture.font-regular_short, .capture.font-ui_regular,
+.capture.font-large {
     font-size: 8px;
 }
+.capture .font-title_tall, .capture .font-title_news { font-size: 14px; }
+.capture .font-title_thick { font-size: 12px; }
 
 body {
     font-smooth: never;
