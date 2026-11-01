@@ -86,21 +86,21 @@ After any change: clear the browser cache, reload the loc tool, repack with --ma
       layout, 6-10px). We do NOT override it: matching the English pixel
       layout is what keeps every document fitting its box. */
 
-/* 2. Arabic at 7px occupies the same vertical space as the English pixel
-      fonts at 8px, so lines stack exactly like the English version. */
+/* 2. Document text size. 6px is smaller than the English pixel layout;
+      if any Arabic becomes hard to read, put this back to 7px. */
 .capture .font-tiny, .capture .font-small_tight, .capture .font-small_harsh,
 .capture .font-regular, .capture .font-regular_short, .capture .font-ui_regular,
 .capture .font-large, .capture .font-small, .capture .font-cursive,
 .capture.font-tiny, .capture.font-small_tight, .capture.font-small_harsh,
 .capture.font-regular, .capture.font-regular_short, .capture.font-ui_regular,
 .capture.font-large {
-    font-size: 7px;
+    font-size: 6px;
     line-height: inherit;
 }
 
-/* 3. Titles: same ratio against the original 16px/14px */
-.capture .font-title_tall, .capture .font-title_news { font-size: 14px; }
-.capture .font-title_thick { font-size: 12px; }
+/* 3. Titles, scaled down to match */
+.capture .font-title_tall, .capture .font-title_news { font-size: 12px; }
+.capture .font-title_thick { font-size: 10px; }
 
 body {
     font-smooth: never;
