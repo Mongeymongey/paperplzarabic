@@ -12,19 +12,19 @@ After any change: clear the browser cache, reload the loc tool, repack with --ma
 
 /* ---- Used by the loc tool AND the game ---- */
 @font-face { font-family: 'tiny'; src: url('https://raw.githubusercontent.com/Mongeymongey/paperplzarabic/main/fonts/arabic-regular.ttf'); }
-.font-tiny { font-family: 'tiny'; font-size: 9px; line-height: 10px; }
+.font-tiny { font-family: 'tiny'; font-size: 10px; line-height: 11px; }
 
 @font-face { font-family: 'small_tight'; src: url('https://raw.githubusercontent.com/Mongeymongey/paperplzarabic/main/fonts/arabic-regular.ttf'); }
-.font-small_tight { font-family: 'small_tight'; font-size: 9px; line-height: 10px; }
+.font-small_tight { font-family: 'small_tight'; font-size: 10px; line-height: 11px; }
 
 @font-face { font-family: 'small_harsh'; src: url('https://raw.githubusercontent.com/Mongeymongey/paperplzarabic/main/fonts/arabic-regular.ttf'); }
-.font-small_harsh { font-family: 'small_harsh'; font-size: 9px; line-height: 10px; }
+.font-small_harsh { font-family: 'small_harsh'; font-size: 10px; line-height: 11px; }
 
 @font-face { font-family: 'regular'; src: url('https://raw.githubusercontent.com/Mongeymongey/paperplzarabic/main/fonts/arabic-regular.ttf'); }
-.font-regular, body { font-family: 'regular'; font-size: 9px; line-height: 10px; }
+.font-regular, body { font-family: 'regular'; font-size: 10px; line-height: 11px; }
 
 @font-face { font-family: 'regular_short'; src: url('https://raw.githubusercontent.com/Mongeymongey/paperplzarabic/main/fonts/arabic-regular.ttf'); }
-.font-regular_short { font-family: 'regular_short'; font-size: 9px; line-height: 10px; }
+.font-regular_short { font-family: 'regular_short'; font-size: 10px; line-height: 11px; }
 
 @font-face { font-family: 'title_tall'; src: url('https://raw.githubusercontent.com/Mongeymongey/paperplzarabic/main/fonts/arabic-bold.ttf'); }
 .font-title_tall { font-family: 'title_tall'; font-size: 16px; line-height: 16px; }
@@ -36,22 +36,22 @@ After any change: clear the browser cache, reload the loc tool, repack with --ma
 .font-title_thick { font-family: 'title_thick'; font-size: 14px; line-height: 14px; }
 
 @font-face { font-family: 'ui_regular'; src: url('https://raw.githubusercontent.com/Mongeymongey/paperplzarabic/main/fonts/arabic-regular.ttf'); }
-.font-ui_regular { font-family: 'ui_regular'; font-size: 9px; line-height: 10px; }
+.font-ui_regular { font-family: 'ui_regular'; font-size: 10px; line-height: 11px; }
 
 @font-face { font-family: 'large'; src: url('https://raw.githubusercontent.com/Mongeymongey/paperplzarabic/main/fonts/arabic-regular.ttf'); }
-.font-large { font-family: 'large'; font-size: 9px; line-height: 11px; }
+.font-large { font-family: 'large'; font-size: 10px; line-height: 12px; }
 
 /* ---- Used only by the loc tool (baked document images) ---- */
 @font-face { font-family: 'fallback'; src: url('https://raw.githubusercontent.com/Mongeymongey/paperplzarabic/main/fonts/arabic-regular.ttf'); }
 
 @font-face { font-family: 'small'; src: url('https://raw.githubusercontent.com/Mongeymongey/paperplzarabic/main/fonts/arabic-regular.ttf'); }
-.font-small { font-family: 'small'; font-size: 9px; line-height: 10px; }
+.font-small { font-family: 'small'; font-size: 10px; line-height: 11px; }
 
 @font-face { font-family: 'title_serif'; src: url('https://raw.githubusercontent.com/Mongeymongey/paperplzarabic/main/fonts/arabic-bold.ttf'); }
 .font-title_serif { font-family: 'title_serif'; font-size: 11px; line-height: 13px; }
 
 @font-face { font-family: 'cursive'; src: url('https://raw.githubusercontent.com/Mongeymongey/paperplzarabic/main/fonts/arabic-regular.ttf'); }
-.font-cursive { font-family: 'cursive'; font-size: 9px; line-height: 10px; }
+.font-cursive { font-family: 'cursive'; font-size: 10px; line-height: 11px; }
 
 @font-face { font-family: 'scribble'; src: url('https://raw.githubusercontent.com/Mongeymongey/paperplzarabic/main/fonts/arabic-regular.ttf'); }
 .font-scribble { font-family: 'scribble'; font-size: 16px; line-height: 16px; }
@@ -86,21 +86,24 @@ After any change: clear the browser cache, reload the loc tool, repack with --ma
       layout, 6-10px). We do NOT override it: matching the English pixel
       layout is what keeps every document fitting its box. */
 
-/* 2. Document text size. 6px is smaller than the English pixel layout;
-      if any Arabic becomes hard to read, put this back to 7px. */
+/* 2. Document text size. Documents are captured as pictures at whatever
+      size the browser shows, so they can stay smaller than the game font
+      above without any loss of shape. 7px keeps letters separate while
+      occupying about the same height as the English 8px pixel fonts.
+      If a document looks blurry, raise this to 8px. */
 .capture .font-tiny, .capture .font-small_tight, .capture .font-small_harsh,
 .capture .font-regular, .capture .font-regular_short, .capture .font-ui_regular,
 .capture .font-large, .capture .font-small, .capture .font-cursive,
 .capture.font-tiny, .capture.font-small_tight, .capture.font-small_harsh,
 .capture.font-regular, .capture.font-regular_short, .capture.font-ui_regular,
 .capture.font-large {
-    font-size: 6px;
+    font-size: 7px;
     line-height: inherit;
 }
 
 /* 3. Titles, scaled down to match */
-.capture .font-title_tall, .capture .font-title_news { font-size: 12px; }
-.capture .font-title_thick { font-size: 10px; }
+.capture .font-title_tall, .capture .font-title_news { font-size: 14px; }
+.capture .font-title_thick { font-size: 12px; }
 
 body {
     font-smooth: never;
