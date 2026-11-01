@@ -12,19 +12,19 @@ After any change: clear the browser cache, reload the loc tool, repack with --ma
 
 /* ---- Used by the loc tool AND the game ---- */
 @font-face { font-family: 'tiny'; src: url('https://raw.githubusercontent.com/Mongeymongey/paperplzarabic/main/fonts/arabic-regular.ttf'); }
-.font-tiny { font-family: 'tiny'; font-size: 10px; line-height: 12px; }
+.font-tiny { font-family: 'tiny'; font-size: 9px; line-height: 10px; }
 
 @font-face { font-family: 'small_tight'; src: url('https://raw.githubusercontent.com/Mongeymongey/paperplzarabic/main/fonts/arabic-regular.ttf'); }
-.font-small_tight { font-family: 'small_tight'; font-size: 10px; line-height: 12px; }
+.font-small_tight { font-family: 'small_tight'; font-size: 9px; line-height: 10px; }
 
 @font-face { font-family: 'small_harsh'; src: url('https://raw.githubusercontent.com/Mongeymongey/paperplzarabic/main/fonts/arabic-regular.ttf'); }
-.font-small_harsh { font-family: 'small_harsh'; font-size: 10px; line-height: 12px; }
+.font-small_harsh { font-family: 'small_harsh'; font-size: 9px; line-height: 10px; }
 
 @font-face { font-family: 'regular'; src: url('https://raw.githubusercontent.com/Mongeymongey/paperplzarabic/main/fonts/arabic-regular.ttf'); }
-.font-regular, body { font-family: 'regular'; font-size: 10px; line-height: 12px; }
+.font-regular, body { font-family: 'regular'; font-size: 9px; line-height: 10px; }
 
 @font-face { font-family: 'regular_short'; src: url('https://raw.githubusercontent.com/Mongeymongey/paperplzarabic/main/fonts/arabic-regular.ttf'); }
-.font-regular_short { font-family: 'regular_short'; font-size: 10px; line-height: 12px; }
+.font-regular_short { font-family: 'regular_short'; font-size: 9px; line-height: 10px; }
 
 @font-face { font-family: 'title_tall'; src: url('https://raw.githubusercontent.com/Mongeymongey/paperplzarabic/main/fonts/arabic-bold.ttf'); }
 .font-title_tall { font-family: 'title_tall'; font-size: 16px; line-height: 16px; }
@@ -36,22 +36,22 @@ After any change: clear the browser cache, reload the loc tool, repack with --ma
 .font-title_thick { font-family: 'title_thick'; font-size: 14px; line-height: 14px; }
 
 @font-face { font-family: 'ui_regular'; src: url('https://raw.githubusercontent.com/Mongeymongey/paperplzarabic/main/fonts/arabic-regular.ttf'); }
-.font-ui_regular { font-family: 'ui_regular'; font-size: 10px; line-height: 12px; }
+.font-ui_regular { font-family: 'ui_regular'; font-size: 9px; line-height: 10px; }
 
 @font-face { font-family: 'large'; src: url('https://raw.githubusercontent.com/Mongeymongey/paperplzarabic/main/fonts/arabic-regular.ttf'); }
-.font-large { font-family: 'large'; font-size: 10px; line-height: 13px; }
+.font-large { font-family: 'large'; font-size: 9px; line-height: 11px; }
 
 /* ---- Used only by the loc tool (baked document images) ---- */
 @font-face { font-family: 'fallback'; src: url('https://raw.githubusercontent.com/Mongeymongey/paperplzarabic/main/fonts/arabic-regular.ttf'); }
 
 @font-face { font-family: 'small'; src: url('https://raw.githubusercontent.com/Mongeymongey/paperplzarabic/main/fonts/arabic-regular.ttf'); }
-.font-small { font-family: 'small'; font-size: 10px; line-height: 12px; }
+.font-small { font-family: 'small'; font-size: 9px; line-height: 10px; }
 
 @font-face { font-family: 'title_serif'; src: url('https://raw.githubusercontent.com/Mongeymongey/paperplzarabic/main/fonts/arabic-bold.ttf'); }
 .font-title_serif { font-family: 'title_serif'; font-size: 11px; line-height: 13px; }
 
 @font-face { font-family: 'cursive'; src: url('https://raw.githubusercontent.com/Mongeymongey/paperplzarabic/main/fonts/arabic-regular.ttf'); }
-.font-cursive { font-family: 'cursive'; font-size: 10px; line-height: 12px; }
+.font-cursive { font-family: 'cursive'; font-size: 9px; line-height: 10px; }
 
 @font-face { font-family: 'scribble'; src: url('https://raw.githubusercontent.com/Mongeymongey/paperplzarabic/main/fonts/arabic-regular.ttf'); }
 .font-scribble { font-family: 'scribble'; font-size: 16px; line-height: 16px; }
