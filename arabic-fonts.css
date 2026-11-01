@@ -74,6 +74,36 @@ After any change: clear the browser cache, reload the loc tool, repack with --ma
 @font-face { font-family: 'passport_unitedfed'; src: url('https://raw.githubusercontent.com/Mongeymongey/paperplzarabic/main/fonts/arabic-bold.ttf'); }
 @font-face { font-family: 'passport_kolechia'; src: url('https://raw.githubusercontent.com/Mongeymongey/paperplzarabic/main/fonts/arabic-bold.ttf'); }
 
+/* =====================================================================
+   DOCUMENTS ONLY (the baked images). Everything below is scoped to
+   ".capture", the documents in the loc tool, so it does NOT change the
+   in-game fonts the packer builds with --makeFonts.
+   The document layouts were written for 8px pixel fonts and squeeze
+   lines together (line-height 6-10px). Arabic needs more room.
+   ===================================================================== */
+
+/* 1. Loosen the very tight line spacing written into the layouts */
+.capture [style*="line-height:6px"],  .capture [style*="line-height: 6px"],
+.capture [style*="line-height:7px"],  .capture [style*="line-height: 7px"],
+.capture [style*="line-height:8px"],  .capture [style*="line-height: 8px"],
+.capture [style*="line-height:9px"],  .capture [style*="line-height: 9px"],
+.capture [style*="line-height:10px"], .capture [style*="line-height: 10px"] {
+    line-height: 11px !important;
+}
+
+/* 2. Multi-line titles (e.g. Certificate of Vaccination, flyers) */
+.capture .font-title_tall,
+.capture .font-title_news,
+.capture .font-title_thick {
+    line-height: 18px !important;
+}
+
+/* 3. Passport field labels (DOB / SEX / ISS / EXP) sit in tiny boxes */
+.capture.passport .font-small,
+.capture .passport .font-small {
+    font-size: 8px;
+}
+
 body {
     font-smooth: never;
     -webkit-font-smoothing: none;
