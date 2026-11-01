@@ -78,36 +78,27 @@ After any change: clear the browser cache, reload the loc tool, repack with --ma
    DOCUMENTS ONLY (the baked images). Everything below is scoped to
    ".capture", the documents in the loc tool, so it does NOT change the
    in-game fonts the packer builds with --makeFonts.
-   The document layouts were written for 8px pixel fonts and squeeze
-   lines together (line-height 6-10px). Arabic needs more room.
+   The layouts were written for 8px pixel fonts with tight line spacing,
+   so Arabic is set smaller here to occupy the same vertical space.
    ===================================================================== */
 
-/* 1. Loosen the very tight line spacing written into the layouts */
-.capture [style*="line-height:6px"],  .capture [style*="line-height: 6px"],
-.capture [style*="line-height:7px"],  .capture [style*="line-height: 7px"],
-.capture [style*="line-height:8px"],  .capture [style*="line-height: 8px"],
-.capture [style*="line-height:9px"],  .capture [style*="line-height: 9px"],
-.capture [style*="line-height:10px"], .capture [style*="line-height: 10px"] {
-    line-height: 10px !important;
-}
+/* 1. Documents keep their original tight line spacing (written into each
+      layout, 6-10px). We do NOT override it: matching the English pixel
+      layout is what keeps every document fitting its box. */
 
-/* 2. Multi-line titles (e.g. Certificate of Vaccination, flyers) */
-.capture .font-title_tall,
-.capture .font-title_news,
-.capture .font-title_thick {
-    line-height: 16px !important;
-}
-
-/* 3. Smaller text inside documents only (in-game text stays 9px).
-      8px is the smallest size where Arabic dots stay readable. */
+/* 2. Arabic at 7px occupies the same vertical space as the English pixel
+      fonts at 8px, so lines stack exactly like the English version. */
 .capture .font-tiny, .capture .font-small_tight, .capture .font-small_harsh,
 .capture .font-regular, .capture .font-regular_short, .capture .font-ui_regular,
 .capture .font-large, .capture .font-small, .capture .font-cursive,
 .capture.font-tiny, .capture.font-small_tight, .capture.font-small_harsh,
 .capture.font-regular, .capture.font-regular_short, .capture.font-ui_regular,
 .capture.font-large {
-    font-size: 8px;
+    font-size: 7px;
+    line-height: inherit;
 }
+
+/* 3. Titles: same ratio against the original 16px/14px */
 .capture .font-title_tall, .capture .font-title_news { font-size: 14px; }
 .capture .font-title_thick { font-size: 12px; }
 
